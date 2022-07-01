@@ -4,6 +4,12 @@
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   color: #141414;
 }
+html {
+  scroll-behavior: smooth;
+}
+:target {
+  scroll-margin-top: 0em;
+}
 ul {
   list-style: none;
 }
@@ -36,13 +42,15 @@ img {
 }
 @media (max-width: 700px) {
   .header {
-    flex-direction: column;
     gap: 40px;
     padding: 20px;
   }
   .header a {
     background: #f5f5f5;
     border-radius: 4px;
+  }
+  .header-menu li:nth-child(1) {
+    display: none;
   }
 }
 .introducao {
