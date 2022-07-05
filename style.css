@@ -118,7 +118,7 @@ img {
   gap: 100px;
   max-width: 1100px;
   padding: 40px 20px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .experiencia .subtitulo {
   color: #e0e0e0;
@@ -133,68 +133,119 @@ img {
   max-width: 5ch;
 }
 .experiencia-texto {
-  margin-top: 30px;
+  margin-top: 20px;
   max-width: 40ch;
   font-size: 1.5rem;
   line-height: 1.33;
   margin-bottom: 60px;
   color: #525252;
 }
-.experiencia-texto strong {
+strong {
   color: #141414;
 }
-.empresa {
+.experiencia-grid {
+  grid-column: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 20px;
-  gap: 10px 20px;
-  background: #f5f5f5;
-  margin-bottom: 20px;
-  border-radius: 4px;
+  gap: 30px 0px;
   position: relative;
 }
-.empresa::before {
+.experiencia-habilidades {
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 20px 20px;
+  display: grid;
+  gap: 15px;
+  position: relative;
+}
+.experiencia-habilidades div::before {
   content: "";
   display: block;
   width: 4px;
   height: 20px;
   background: linear-gradient(#b629f8, #800add);
   position: absolute;
-  top: 20px;
-  left: -4px;
+  left: -5px;
 }
-.empresa-ano {
+.line-rx::before {
   position: absolute;
-  top: 22px;
-  width: 80px;
-  text-align: right;
-  left: -100px;
-  color: #525252;
-  font-size: 0.875rem;
+  content: "";
+  background-color: #000000;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  top: -3px;
 }
-.empresa-titulo {
-  font-size: 1.125rem;
-  line-height: 1.1;
-  font-weight: bold;
-  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-}
-.empresa-texto {
-  font-size: 0.875rem;
-  line-height: 1.4;
-  color: #525252;
-}
-.empresa-habilidade {
+.line-1 {
+  max-width: 250px;
+  height: 3px;
+  width: 250px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-content: start;
 }
-.empresa-habilidade li {
-  font-size: 0.875rem;
-  line-height: 1.4;
+.line-cz {
+  position: relative;
+  display: block;
+  width: 250px;
+  background-color: #800add;
+  height: 3px;
+  box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 20%);
+  position: initial;
+}
+.line-rx {
+  position: relative;
+  display: block;
+  width: 240px;
+  background-color: rgb(110, 110, 110);
+  height: 3px;
+  box-shadow: 0 1px 30px 0 rgba(174, 36, 244, 20%);
+}
+.habilidade1 span:nth-child(2){
+  width: 50px;
+}
+.habilidade2 span:nth-child(2){
+  width: 100px;
+}
+.habilidade3 span:nth-child(2){
+  width: 700px;
+}
+.cnt1 {
+  place-self: center;
+  max-width: 20ch;
+  font-size: 1.4rem;
+  line-height: 1.33;
+}
+.experiencia-projetos {
+  background: #f5f5f5;
   border-radius: 4px;
-  background: #fff;
-  padding: 5px 10px;
+  padding: 20px 20px;
+  display: grid;
+  gap: 20px;
+  padding-left: 40px;
+}
+.experiencia-projetos-itens {
+  display: grid;
+  gap: 30px;
+}
+.projetos-itens {
+  display: grid;
+  gap: 10px;
+  position: relative;
+}
+.cf::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(./img/cafe.svg) no-repeat center center;
+  position: absolute;
+  left: -30px;
+}
+.ms::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(./img/musica.svg) no-repeat center center;
+  position: absolute;
+  left: -30px;
 }
 @media (max-width: 800px) {
   .experiencia {
@@ -209,21 +260,10 @@ img {
   .experiencia .subtitulo {
     color: #141414;
   }
-  .experiencia-texto {
+  .experiencia-texto .cnt1 {
     font-size: 1.25rem;
   }
-  .empresa-ano {
-    position: initial;
-    order: 1;
-    width: initial;
-    text-align: left;
-  }
-  /*   .empresa-ano::before {
-    content: 'Ano: ';
-  } */
-}
-@media (max-width: 400px) {
-  .empresa {
+  .experiencia-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -231,7 +271,7 @@ img {
   background: #141414;
 }
 .formacao-caixa {
-  max-width: 1000px;
+  max-width: 1100px;
   padding: 120px 20px;
   margin: 0 auto;
   display: grid;
@@ -261,7 +301,7 @@ img {
 .formacao .subtitulo {
   color: #000;
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
-  max-width: 5ch;
+  max-width: 4ch;
 }
 .formacao-texto {
   font-size: 1.5rem;
@@ -390,7 +430,7 @@ img {
 .footer-texto {
   font-size: 1.5rem;
   line-height: 1.33;
-  color: #cccccc;
+  color: #ccc;
 }
 .footer-incos {
   display: flex;
